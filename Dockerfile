@@ -26,9 +26,16 @@ RUN dpkg -i $HOME/$ASFP_FILE
 RUN rm $HOME/$ASFP_FILE
 
 # Android Studio
+#WORKDIR /opt
+#RUN wget -O android_studio.tgz \
+#        'https://r3---sn-j5o7dn7s.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.20/android-studio-2022.3.1.20-linux.tar.gz?cms_redirect=yes&mh=5B&mip=58.248.106.93&mm=28&mn=sn-j5o7dn7s&ms=nvh&mt=1696914999&mv=m&mvi=3&pl=21&rmhost=r4---sn-j5o7dn7s.gvt1.com&shardbypass=sd&smhost=r4---sn-j5o7dn7z.gvt1.com' && \
+#        tar xvf android_studio.tgz && \
+#        rm android_studio.tgz
+#WORKDIR $HOME
+# Android Studio
 WORKDIR /opt
 RUN wget -O android_studio.tgz \
-        'https://r3---sn-j5o7dn7s.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.20/android-studio-2022.3.1.20-linux.tar.gz?cms_redirect=yes&mh=5B&mip=58.248.106.93&mm=28&mn=sn-j5o7dn7s&ms=nvh&mt=1696914999&mv=m&mvi=3&pl=21&rmhost=r4---sn-j5o7dn7s.gvt1.com&shardbypass=sd&smhost=r4---sn-j5o7dn7z.gvt1.com' && \
+        'https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2022.3.1.19/android-studio-2022.3.1.19-linux.tar.gz' && \
         tar xvf android_studio.tgz && \
         rm android_studio.tgz
 WORKDIR $HOME
