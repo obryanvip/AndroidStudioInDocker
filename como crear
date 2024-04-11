@@ -1,0 +1,21 @@
+docker logout
+
+ docker login
+ 
+ 
+ docker build -t obryanvip/androidstudio:2023 /workspaces/AndroidStudioInDocker/
+
+
+docker run -d -p 6080:6080 -e EMULATOR_DEVICE="Samsung Galaxy S10" -e WEB_VNC=true --device /dev/kvm obryanvip/emu2024
+
+docker push obryanvip/androidstudio:1.5 
+
+
+
+#con clave docker run -d --name YourName --shm-size 2G -P -p 8888:5901 -p 8899:6901 -e VNC_RESOLUTION=1440x900 -e VNC_PW=ppllmmoo --device /dev/kvm --user $(id -u):$(id -g) obryanvip/androidstudio:2023
+#sin clave  docker run -d --name obry --shm-size 2G -P -p 8888:5901 -p 8899:6901 -e VNC_RESOLUTION=1440x900  --device /dev/kvm --user $(id -u):$(id -g) obryanvip/androidstudio:2023
+
+
+ docker ps -a  # ver contenedores activos
+# Contenedores en ejecución
+docker ps
